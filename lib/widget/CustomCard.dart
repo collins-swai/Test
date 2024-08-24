@@ -17,7 +17,7 @@ class CustomCard extends StatelessWidget {
     print("Building CustomCard with title: $title and description: $description");
     return Container(
       width: 328.0,
-      height: 100.0,
+      height: 120.0,
       padding: const EdgeInsets.only(top: 16.0),
       margin: const EdgeInsets.only(bottom: 8.0),
       decoration: BoxDecoration(
@@ -79,7 +79,7 @@ class CustomCard extends StatelessWidget {
                   color: Color(0xFF9E9E9E), // Color with opacity
                 ),
                 overflow: TextOverflow.ellipsis,
-                maxLines: 2,
+                maxLines: 3,
               ),
             ),
           ),
