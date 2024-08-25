@@ -5,16 +5,17 @@ class CustomCard extends StatelessWidget {
   final String description;
   final VoidCallback onDelete;
 
-  const CustomCard({
-    Key? key,
-    required this.title,
-    required this.description,
-    required this.onDelete
-  }) : super(key: key);
+  const CustomCard(
+      {Key? key,
+      required this.title,
+      required this.description,
+      required this.onDelete})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print("Building CustomCard with title: $title and description: $description");
+    print(
+        "Building CustomCard with title: $title and description: $description");
     return Container(
       width: 328.0,
       height: 120.0,
@@ -60,7 +61,14 @@ class CustomCard extends StatelessWidget {
                 ),
                 IconButton(
                   icon: const Icon(Icons.delete_outline, color: Colors.red),
-                  onPressed: onDelete,
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text('Delete "$title"'),
+                      duration: Duration(seconds: 5),
+                    ));
+                    onDelete();
+                  },
+                  // onPressed: onDelete,
                 ),
               ],
             ),
@@ -69,9 +77,11 @@ class CustomCard extends StatelessWidget {
           Expanded(
             child: Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
               child: Text(
-                description.isNotEmpty ? description : 'No Description', // Handle empty description
+                description.isNotEmpty ? description : 'No Description',
+                // Handle empty description
                 style: const TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 14,
