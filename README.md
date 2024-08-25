@@ -24,8 +24,8 @@ A new Flutter project.
 
 ## Screenshoots 
 - Projects starts from the home screen
-  | Home screen                                                                                                                       | Items screen                                                                                                                         |           Delete Screen                                                                                                          |
+  | Add Items screen                                                                                                                       | Home screen                                                                                                                         |           Delete Screen                                                                                                          |
   | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-  | <img src="assets/screenshots/itemslist.png"/> | <img src="assets/screenshots/itemsadd.png"/> | <img src="assets/screenshots/additems.png"/>
+  | <img src="assets/screenshots/itemsadd.png"/> | <img src="assets/screenshots/itemslist.png"/> | <img src="assets/screenshots/additems.png"/>
 
 
